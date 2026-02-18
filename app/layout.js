@@ -58,27 +58,45 @@ export default function RootLayout({ children }) {
         {children}
 
         {/* FOOTER */}
-        <footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
-          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-white text-lg font-bold mb-4">HJMR Industries</h3>
-              <p className="text-sm leading-relaxed">Simplifying hygiene with durable, high-quality spin buckets and cleaning accessories.</p>
-            </div>
-            <div>
-              <h3 className="text-white text-lg font-bold mb-4">Contact</h3>
-              <ul className="space-y-2 text-sm">
-                <li className="flex items-center gap-2"><MapPin size={16}/> Vasai, Palghar, Maharashtra</li>
-                <li className="flex items-center gap-2"><Phone size={16}/> +91 XXXXX XXXXX</li>
-                <li className="flex items-center gap-2"><Mail size={16}/> contact@hjmr.com</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white text-lg font-bold mb-4">Statutory</h3>
-              <p className="text-xs">GST: 27AAPFH4059M1ZQ</p>
-              <p className="text-xs">IEC: AAPFH4059M</p>
-            </div>
-          </div>
-        </footer>
+       {/* FOOTER */}
+<footer className="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+  <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <div>
+      <h3 className="text-white text-lg font-bold mb-4">HJMR Industries</h3>
+      <p className="text-sm leading-relaxed">Simplifying hygiene with durable, high-quality spin buckets and cleaning accessories.</p>
+    </div>
+    <div>
+      <h3 className="text-white text-lg font-bold mb-4">Contact</h3>
+      <ul className="space-y-2 text-sm">
+        <li className="flex items-center gap-2">Vasai, Palghar, Maharashtra</li>
+        <li className="flex items-center gap-2">+91 98XXX XXXXX</li>
+        <li className="flex items-center gap-2">contact@hjmr.com</li>
+      </ul>
+    </div>
+    <div>
+      <h3 className="text-white text-lg font-bold mb-4">Statutory</h3>
+      <p className="text-xs">GST: 27AAPFH4059M1ZQ</p>
+      <p className="text-xs">IEC: AAPFH4059M</p>
+    </div>
+  </div>
+
+  {/* --- AGENCY SIGNATURE SECTION --- */}
+  <div className="max-w-7xl mx-auto px-4 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+    <p>&copy; {new Date().getFullYear()} HJMR Industries. All rights reserved.</p>
+    
+    <p className="mt-2 md:mt-0 flex items-center gap-1">
+      Designed & Developed by 
+      <a 
+        href="https://dyash2.github.io/portfolio/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="text-blue-500 font-bold hover:text-blue-400 transition-colors"
+      >
+        YDSR Company
+      </a>
+    </p>
+  </div>
+</footer>
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-slate-50 to-blue-50 py-20 lg:py-32 overflow-hidden">
+      <section className="relative bg-linear-to-br from-slate-50 to-blue-50 py-20 lg:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto">
             <span className="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
