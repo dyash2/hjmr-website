@@ -107,6 +107,7 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import Link from 'next/link';
 import { Menu } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -197,6 +198,7 @@ export default function RootLayout({ children }) {
           </div>
         </footer>
 
+        <Analytics />
       </body>
     </html>
   );
