@@ -1,0 +1,1411 @@
+You are a senior full-stack Next.js developer, UI/UX designer, Tailwind CSS expert, B2B e-commerce architect, and payment-integration specialist.  
+  
+I have an EXISTING Next.js project.  
+   
+I want you to transform the existing project into a premium no heavy colors, production-quality B2B + e-commerce website for my Indian cleaning-products brand:  
+  
+==================================================  
+BRAND  
+==================================================  
+  
+Brand Name:  
+AT-ONE  
+  
+Tagline:  
+"Sparkles your home..!"  
+  
+Business:  
+AT-ONE is an Indian manufacturer and supplier of premium cleaning products including mops, spin mops, mop buckets, mop refills and cleaning accessories.  
+  
+IMPORTANT BRAND POSITIONING:  
+  
+AT-ONE is PROUDLY MADE IN INDIA.  
+  
+The website must communicate:  
+  
+"MADE IN INDIA"  
+"INDIAN MANUFACTURING"  
+"BUILT FOR INDIA • READY FOR THE WORLD"  
+  
+The Made in India identity should be an important trust signal throughout the website.  
+  
+==================================================  
+IMPORTANT — EXISTING PROJECT  
+==================================================  
+  
+DO NOT delete or recreate the project from scratch.  
+  
+First inspect the existing project.  
+  
+Inspect:  
+  
+- app/  
+- public/  
+- package.json  
+- app/layout.js  
+- app/page.js  
+- app/products/  
+- app/about/  
+- app/product-details/  
+- globals.css  
+- tailwind configuration  
+- existing images  
+- existing components  
+  
+Identify what already works.  
+  
+Preserve useful existing code.  
+  
+Improve the project progressively.  
+  
+Do not unnecessarily install new packages if an existing package can solve the requirement.  
+  
+Before making major architectural changes, understand the current project.  
+  
+==================================================  
+TECH STACK  
+==================================================  
+  
+Use:  
+  
+Next.js  
+App Router  
+JavaScript or TypeScript according to the existing project  
+Tailwind CSS  
+Lucide React  
+next/image  
+next/link  
+  
+Use React components properly.  
+  
+Prefer Server Components where possible.  
+  
+Use Client Components only where interactivity requires them.  
+  
+==================================================  
+DESIGN OBJECTIVE  
+==================================================  
+  
+Create a premium, modern, sophisticated B2B e-commerce website.  
+  
+The website should feel like a professional Indian manufacturing brand rather than a generic online store.  
+  
+Primary business objective:  
+  
+WHOLESALE + BULK ORDERS + DISTRIBUTORS + INSTITUTIONAL SALES  
+  
+Secondary objective:  
+  
+Normal online shopping and payment.  
+  
+The design should communicate:  
+  
+Reliable  
+Professional  
+Industrial  
+Clean  
+Modern  
+Trustworthy  
+Indian manufacturing  
+Export-ready  
+  
+==================================================  
+COLOR SYSTEM  
+==================================================  
+  
+Primary: #7886C7
+Secondary: #A9B5DF
+Accent: #60A5FA
+Background: #F8FAFC
+White: #FFFFFF
+Text: #0F172A
+Muted: #64748B
+Dark Navy: #0F172A
+  
+Use blue gradients carefully.  
+  
+Major hero sections can use:  
+  
+Use subtle blurred blue gradient orbs in backgrounds.  
+  
+Do NOT overuse gradients.  
+  
+Do NOT use excessive glassmorphism.  
+  
+Do NOT make every card rounded excessively.  
+  
+Keep the design premium and corporate.  
+  
+==================================================  
+TYPOGRAPHY  
+==================================================  
+  
+Use a premium modern font.  
+  
+Prefer:  
+  
+Inter  
+Manrope  
+Plus Jakarta Sans  
+Geist  
+  
+Use:  
+  
+Large bold headings  
+Medium navigation  
+Highly readable body text  
+Clear hierarchy  
+  
+Hero heading should be strong and visually dominant.  
+  
+==================================================  
+MADE IN INDIA BRANDING  
+==================================================  
+  
+This is VERY IMPORTANT.  
+  
+AT-ONE must be presented as a proudly Indian-manufactured brand.  
+  
+Use an elegant Made in India badge/emblem.  
+  
+Do not make it look cheap or overly patriotic.  
+  
+The website's primary color identity remains:  
+  
+LIGHT NAVY + BLUE + WHITE  
+  
+Use very subtle saffron/green only where appropriate around the Made in India badge.  
+  
+Do not cover the entire website with tricolor elements.  
+  
+Use Made in India branding in:  
+  
+1. Top bar  
+2. Hero section  
+3. Trust indicators  
+4. Product cards  
+5. About section  
+6. Manufacturing section  
+7. Bulk order section  
+8. Final CTA  
+9. Footer  
+  
+Example:  
+  
+"🇮🇳 MADE IN INDIA"  
+  
+"Indian Manufacturing"  
+  
+"Designed & Manufactured in India"  
+  
+"Made in India • Ready for the World"  
+  
+If an official AT-ONE Made in India badge exists in /public, use that asset.  
+  
+Otherwise create a clean CSS/text badge without claiming official government certification.  
+  
+Do NOT invent certifications.  
+  
+==================================================  
+HEADER  
+==================================================  
+  
+Create a premium responsive header.  
+  
+TOP BAR:  
+  
+Dark navy background.  
+  
+Left:  
+  
+"🇮🇳 Proudly Made in India"  
+  
+Center:  
+  
+"Manufacturer • Wholesale • Bulk Orders"  
+  
+Right:  
+  
+"Pan India Supply • Export Ready"  
+  
+NAVBAR:  
+  
+AT-ONE logo on the left.  
+  
+IMPORTANT:  
+  
+Use the existing AT-ONE logo from /public if available.  
+  
+Do not display the logo at its natural oversized dimensions.  
+  
+Use next/image.  
+  
+Constrain it approximately to:  
+  
+height: 40–48px  
+  
+Maintain aspect ratio.  
+  
+Navigation:  
+  
+Home  
+Products  
+Bulk Orders  
+About Us  
+Why AT-ONE  
+Contact  
+  
+Right:  
+  
+"Get Bulk Quote"  
+  
+Primary blue button.  
+  
+Mobile:  
+  
+Hamburger menu.  
+  
+Make mobile navigation functional.  
+  
+Navbar:  
+  
+sticky  
+backdrop blur  
+white/translucent background  
+subtle border  
+smooth transition  
+  
+==================================================  
+HOME PAGE  
+==================================================  
+  
+Create a premium conversion-focused homepage.  
+  
+==================================================  
+HERO  
+==================================================  
+  
+Use a large dark navy / blue hero.  
+  
+Background:  
+  
+deep navy  
+blue glow  
+subtle blurred blue circles  
+soft lighting  
+premium depth  
+  
+LEFT:  
+  
+Small badge:  
+  
+"PREMIUM INDIAN MANUFACTURER"  
+  
+Main heading:  
+  
+"Premium Cleaning Solutions.  
+Made in India. Built for Every Scale."  
+  
+Supporting text:  
+  
+"Premium mops, spin buckets and cleaning accessories manufactured in India for homes, retailers, distributors, institutions and bulk buyers."  
+  
+Primary button:  
+  
+"Explore Products"  
+  
+Secondary button:  
+  
+"Get Bulk Quote"  
+  
+Trust indicators:  
+  
+🇮🇳 Made in India  
+🏭 Indian Manufacturing  
+📦 Bulk Supply  
+🌎 Export Ready  
+  
+RIGHT:  
+  
+Create a premium product showcase using available product images from /public.  
+  
+Show:  
+  
+AT-ONE Spin Mop  
+Mop Bucket  
+Microfiber Mop  
+Flat Mop  
+Mop Accessories  
+  
+If suitable product images don't exist, create clean image placeholders with descriptive labels rather than inventing external URLs.  
+  
+Use premium product cards / image composition.  
+  
+==================================================  
+TRUST STRIP  
+==================================================  
+  
+Immediately below hero.  
+  
+Create four trust blocks:  
+  
+MADE IN INDIA  
+Proudly manufactured in India  
+  
+QUALITY FOCUSED  
+Reliable cleaning products  
+  
+BULK SUPPLY  
+Wholesale & institutional orders  
+  
+DISTRIBUTOR SUPPORT  
+Business partnership support  
+  
+==================================================  
+PRODUCT CATEGORIES  
+==================================================  
+  
+Heading:  
+  
+"Explore Our Cleaning Solutions"  
+  
+Subheading:  
+  
+"Premium cleaning products designed and manufactured in India."  
+  
+Categories:  
+  
+Spin Mops  
+Mop Buckets  
+Flat Mops  
+Mop Refills  
+Microfiber Products  
+Cleaning Brushes  
+Floor Cleaning Accessories  
+Commercial Cleaning Products  
+  
+Create attractive category cards.  
+  
+Each card:  
+  
+Image  
+Category  
+Description  
+Explore button  
+  
+==================================================  
+FEATURED PRODUCTS  
+==================================================  
+  
+Heading:  
+  
+"Best-Selling AT-ONE Products"  
+  
+Create responsive product grid.  
+  
+Desktop:  
+4 columns  
+  
+Tablet:  
+2 columns  
+  
+Mobile:  
+1–2 columns  
+  
+Product card:  
+  
+Product image  
+AT-ONE  
+Product name  
+SKU  
+MOQ  
+Price or "Request Price"  
+Made in India badge  
+Add to Cart  
+Bulk Quote  
+  
+Example:  
+  
+AT-ONE Premium Spin Mop  
+  
+SKU:  
+AT-SPM-001  
+  
+MOQ:  
+50 Units  
+  
+IMPORTANT:  
+  
+Do not invent real prices.  
+  
+Use configurable placeholder values in product data.  
+  
+==================================================  
+BULK ORDER SECTION  
+==================================================  
+  
+This is one of the most important sections.  
+  
+Dark navy background.  
+  
+Heading:  
+  
+"Need 100, 500 or 5,000+ Units?"  
+  
+Supporting text:  
+  
+"Get special bulk pricing and reliable supply directly from an Indian manufacturer."  
+  
+Buttons:  
+  
+"Request Bulk Quote"  
+"Talk to Sales"  
+  
+Right side:  
+
+Use a clean solid/light form panel with subtle border, shadow, and strong spacing. Do not use glassmorphism.
+  
+Fields:  
+  
+Name  
+Company Name  
+Phone  
+Email  
+Product  
+Quantity  
+GST Number  
+Message  
+  
+Button:  
+  
+"Request Bulk Quote"  
+  
+Add:  
+  
+🇮🇳 Made in India  
+Direct Manufacturer Supply  
+  
+==================================================  
+WHY AT-ONE  
+==================================================  
+  
+White section.  
+  
+Heading:  
+  
+"Why Businesses Choose AT-ONE"  
+  
+Create six cards:  
+  
+Indian Manufacturing  
+Consistent Quality  
+Competitive Pricing  
+Custom Packaging  
+Fast Dispatch  
+Distributor Support  
+  
+Use Lucide icons.  
+  
+Do not invent unsupported certifications.  
+  
+==================================================  
+BUSINESS TYPES  
+==================================================  
+  
+Dark blue section.  
+  
+Heading:  
+  
+"Built for Every Business"  
+  
+Cards:  
+  
+Retailers  
+Wholesalers  
+Distributors  
+Hotels  
+Hospitals  
+Corporate Buyers  
+Institutions  
+Export Buyers  
+  
+==================================================  
+HOW BULK ORDERING WORKS  
+==================================================  
+  
+Create four-step process.  
+  
+01  
+Select Products  
+  
+02  
+Submit Quantity  
+  
+03  
+Receive Bulk Quote  
+  
+04  
+Confirm & Pay  
+  
+Use connecting blue line.  
+  
+==================================================  
+ABOUT AT-ONE  
+==================================================  
+  
+Create premium split section.  
+  
+Left:  
+  
+Manufacturing/factory image if available in /public.  
+  
+Right:  
+  
+"Made in India. Made for Better Cleaning."  
+  
+Text:  
+  
+"AT-ONE combines Indian manufacturing, practical product design and dependable supply to deliver cleaning solutions for homes, businesses and professional buyers."  
+  
+Feature points:  
+  
+Quality  
+Innovation  
+Reliable Supply  
+  
+Add Made in India badge.  
+  
+==================================================  
+MANUFACTURING SECTION  
+==================================================  
+  
+Create a dedicated dark section.  
+  
+Heading:  
+  
+"Proudly Made in India"  
+  
+Content:  
+  
+Designed in India  
+Manufactured in India  
+Quality focused  
+Ready for Indian and global markets  
+  
+Show manufacturing imagery if available.  
+  
+If no image is available, use an elegant dark visual layout rather than broken image links.  
+  
+==================================================  
+PRODUCTS PAGE  
+==================================================  
+  
+Route:  
+  
+/products  
+  
+Features:  
+  
+Search  
+Category filters  
+Price filters  
+MOQ filters  
+Sorting  
+Product grid  
+  
+Product card:  
+  
+Image  
+Name  
+SKU  
+MOQ  
+Price / Request Quote  
+Made in India  
+Add to Cart  
+Bulk Quote  
+  
+==================================================  
+PRODUCT DETAIL  
+==================================================  
+  
+Route:  
+  
+/products/[slug]  
+  
+Create dynamic product pages.  
+  
+Include:  
+  
+Image gallery  
+Product name  
+SKU  
+Description  
+Specifications  
+Material  
+Dimensions  
+Colors  
+MOQ  
+Price  
+Wholesale price  
+Bulk pricing  
+  
+Buttons:  
+  
+Add to Cart  
+Buy Now  
+Request Bulk Quote  
+  
+Add:  
+  
+"Manufactured in India"  
+  
+==================================================  
+BULK ORDER PAGE  
+==================================================  
+  
+Route:  
+  
+/bulk-orders  
+  
+Create a dedicated wholesale page.  
+  
+Heading:  
+  
+"Bulk Orders & Wholesale Supply"  
+  
+Include:  
+  
+Company Name  
+Contact Person  
+Email  
+Phone  
+GST Number  
+City  
+State  
+Products  
+Quantity  
+Expected Monthly Requirement  
+Message  
+  
+Button:  
+  
+"Request Bulk Quote"  
+  
+Structure the form so it can later connect to:  
+  
+Email  
+Database  
+CRM  
+WhatsApp  
+Backend API  
+  
+For now, implement proper frontend validation and a success state.  
+  
+==================================================  
+DISTRIBUTOR PAGE  
+==================================================  
+  
+Route:  
+  
+/distributor  
+  
+Heading:  
+  
+"Become an AT-ONE Distributor"  
+  
+Sections:  
+  
+Why Partner With AT-ONE  
+Distributor Benefits  
+Product Range  
+Business Support  
+Territory Opportunities  
+Application Form  
+  
+Do NOT invent actual margins.  
+  
+Use:  
+  
+"[Distributor margin details]"  
+"[Territory availability]"  
+  
+where information is unavailable.  
+  
+==================================================  
+CART  
+==================================================  
+  
+Route:  
+  
+/cart  
+  
+Create a functional shopping cart.  
+  
+Show:  
+  
+Product  
+Image  
+SKU  
+Quantity  
+Unit Price  
+Subtotal  
+Remove  
+  
+Summary:  
+  
+Subtotal  
+GST  
+Shipping  
+Grand Total  
+  
+Button:  
+  
+"Proceed to Checkout"  
+  
+Use React state or an appropriate lightweight state approach.  
+  
+Keep the architecture ready for persistent cart storage later.  
+  
+==================================================  
+CHECKOUT  
+==================================================  
+  
+Route:  
+  
+/checkout  
+  
+Create professional checkout.  
+  
+Customer:  
+  
+Full Name  
+Company  
+Email  
+Phone  
+GST Number  
+Billing Address  
+Shipping Address  
+  
+Order summary:  
+  
+Products  
+Quantity  
+Subtotal  
+GST  
+Shipping  
+Grand Total  
+  
+Payment options:  
+  
+UPI  
+Credit/Debit Card  
+Net Banking  
+  
+Button:  
+  
+"Pay Securely"  
+  
+==================================================  
+PAYMENT GATEWAY  
+==================================================  
+  
+Use Razorpay architecture for Indian payments.  
+  
+IMPORTANT SECURITY RULE:  
+  
+NEVER expose the Razorpay secret key in client-side code.  
+  
+Use:  
+  
+NEXT_PUBLIC_RAZORPAY_KEY_ID  
+RAZORPAY_KEY_SECRET  
+  
+Create server-side API route for creating Razorpay orders.  
+  
+Suggested architecture:  
+  
+/api/payment/create-order  
+  
+/api/payment/verify  
+  
+Flow:  
+  
+10. Customer clicks Pay  
+11. Frontend sends cart/order information to server  
+12. Server creates Razorpay order  
+13. Razorpay checkout opens  
+14. Customer completes payment  
+15. Server verifies Razorpay signature  
+16. Order becomes Paid  
+17. Show order confirmation  
+  
+Do NOT fake payment success.  
+  
+If Razorpay credentials are not available, implement the architecture with environment variables and clearly indicate what needs configuration.  
+  
+==================================================  
+ORDER SUCCESS  
+==================================================  
+  
+Route:  
+  
+/order-success  
+  
+Display:  
+  
+Order Confirmed  
+Order Number  
+Payment Status  
+Customer  
+Products  
+Amount  
+  
+Buttons:  
+  
+Continue Shopping  
+Contact Support  
+  
+==================================================  
+CONTACT  
+==================================================  
+  
+Route:  
+  
+/contact  
+  
+Include:  
+  
+Contact form  
+Phone  
+Email  
+WhatsApp  
+Business Address  
+Business Hours  
+Map placeholder  
+  
+CTA:  
+  
+"Talk to Our Sales Team"  
+  
+==================================================  
+WHY AT-ONE  
+==================================================  
+  
+Route:  
+  
+/why-at-one  
+  
+Sections:  
+  
+Indian Manufacturing  
+Quality  
+Durability  
+Design  
+Competitive Pricing  
+Bulk Supply  
+Distributor Support  
+Customer Service  
+  
+==================================================  
+FOOTER  
+==================================================  
+  
+Dark navy footer.  
+  
+AT-ONE logo  
+  
+Description:  
+  
+"Premium cleaning solutions proudly manufactured in India."  
+  
+Columns:  
+  
+Products  
+Business  
+Company  
+Support  
+Contact  
+  
+Links:  
+  
+Home  
+Products  
+Bulk Orders  
+Distributor  
+About Us  
+Why AT-ONE  
+Contact  
+Privacy Policy  
+Terms & Conditions  
+Shipping Policy  
+Refund Policy  
+  
+Trust strip:  
+  
+🇮🇳 MADE IN INDIA  
+Indian Manufacturing  
+Bulk Supply  
+Export Ready  
+  
+Bottom:  
+  
+"© 2026 AT-ONE. All Rights Reserved."  
+  
+==================================================  
+LEGAL PAGES  
+==================================================  
+  
+Create:  
+  
+/privacy-policy  
+/terms  
+/shipping-policy  
+/refund-policy  
+  
+Use professional placeholder content.  
+  
+Do not provide legal claims as final legal advice.  
+  
+==================================================  
+WHATSAPP  
+==================================================  
+  
+Add floating WhatsApp button.  
+  
+Use configurable number.  
+  
+Prefilled message:  
+  
+"Hello AT-ONE, I am interested in your cleaning products and would like to discuss a bulk order."  
+  
+Do not hard-code an unknown real number.  
+  
+Use:  
+  
+NEXT_PUBLIC_WHATSAPP_NUMBER  
+  
+==================================================  
+PRODUCT DATA  
+==================================================  
+  
+Create:  
+  
+data/products.js  
+  
+Keep product information separate from UI.  
+  
+Example structure:  
+  
+{  
+id,  
+slug,  
+name,  
+sku,  
+category,  
+description,  
+images,  
+specifications,  
+moq,  
+price,  
+wholesalePrice,  
+bulkPrice,  
+inStock,  
+madeInIndia  
+}  
+  
+Use placeholder product data until actual information is provided.  
+  
+==================================================  
+COMPONENT ARCHITECTURE  
+==================================================  
+  
+Create reusable components where appropriate:  
+  
+components/  
+Navbar.jsx  
+TopBar.jsx  
+Footer.jsx  
+Hero.jsx  
+ProductCard.jsx  
+ProductGrid.jsx  
+CategoryCard.jsx  
+TrustSection.jsx  
+WhyChooseUs.jsx  
+BulkOrderForm.jsx  
+ContactForm.jsx  
+FAQ.jsx  
+CartItem.jsx  
+CheckoutSummary.jsx  
+MadeInIndiaBadge.jsx  
+  
+Do not create unnecessary components for trivial markup.  
+  
+==================================================  
+RESPONSIVE DESIGN  
+==================================================  
+  
+The entire website must work on:  
+  
+320px  
+375px  
+425px  
+768px  
+1024px  
+1280px  
+1440px  
+1920px  
+  
+No horizontal scrolling.  
+  
+No oversized logo.  
+  
+No overflowing text.  
+  
+No broken cards.  
+  
+No buttons outside viewport.  
+  
+Mobile navigation must be functional.  
+  
+==================================================  
+ANIMATIONS  
+==================================================  
+  
+Use subtle animations only.  
+  
+Examples:  
+  
+hover transitions  
+button hover  
+card elevation  
+image scale  
+fade-in  
+smooth section transitions  
+  
+Do not use excessive animations.  
+  
+Prioritize performance.  
+  
+==================================================  
+SEO  
+==================================================  
+  
+Implement metadata for every major page.  
+  
+Homepage title:  
+  
+"AT-ONE | Premium Mops & Cleaning Solutions"  
+  
+Description:  
+  
+"AT-ONE is an Indian manufacturer of premium mops, spin mops, mop buckets and cleaning accessories for retailers, distributors, wholesalers and bulk buyers."  
+  
+Use:  
+  
+Open Graph metadata  
+Favicon  
+robots  
+sitemap  
+Semantic HTML  
+Proper H1/H2 hierarchy  
+Image alt text  
+  
+==================================================  
+IMAGE HANDLING  
+==================================================  
+  
+IMPORTANT:  
+  
+First inspect /public for existing images.  
+  
+Use existing AT-ONE logo and product images whenever available.  
+  
+Use next/image.  
+  
+Never use an oversized image without controlling dimensions.  
+  
+Example:  
+  
+<Image  
+src="/at-one.jpeg"  
+alt="AT-ONE"  
+width={160}  
+height={50}  
+className="h-10 w-auto object-contain"  
+/>  
+  
+If an image does not exist:  
+  
+DO NOT create broken image paths.  
+  
+Use a visually appropriate placeholder component.  
+  
+==================================================  
+SECURITY  
+==================================================  
+  
+Never expose:  
+  
+Payment secrets  
+Database credentials  
+API keys  
+SMTP passwords  
+  
+Use:  
+  
+.env.local  
+  
+Example:  
+  
+NEXT_PUBLIC_RAZORPAY_KEY_ID=  
+RAZORPAY_KEY_SECRET=  
+NEXT_PUBLIC_WHATSAPP_NUMBER=  
+DATABASE_URL=  
+  
+Ensure .env.local is ignored by Git.  
+  
+==================================================  
+DATABASE / FUTURE BACKEND  
+==================================================  
+  
+Keep the application architecture ready for future database integration.  
+  
+Future functionality:  
+  
+Products  
+Inventory  
+Orders  
+Customers  
+Bulk enquiries  
+Payments  
+Order status  
+Distributor applications  
+  
+Do not build a fake database.  
+  
+==================================================  
+ADMIN FUTURE SUPPORT  
+==================================================  
+  
+Architecture should allow a future admin dashboard.  
+  
+Potential future features:  
+  
+Product management  
+Inventory  
+Orders  
+Bulk enquiries  
+Customers  
+Pricing  
+MOQ  
+Order status  
+  
+Do not implement a fake admin dashboard now.  
+  
+==================================================  
+DESIGN QUALITY  
+==================================================  
+  
+The final website must NOT look like:  
+  
+A basic Tailwind template  
+A school project  
+A generic AI-generated website  
+A simple dropshipping store  
+  
+It should look like:  
+  
+A premium Indian manufacturing company  
+A serious B2B supplier  
+A modern e-commerce brand  
+A professional wholesale platform  
+  
+Prioritize:  
+  
+Spacing  
+Alignment  
+Typography  
+Product photography  
+CTA hierarchy  
+Trust signals  
+Made in India identity  
+Bulk order conversion  
+Mobile UX  
+  
+==================================================  
+IMPORTANT BUSINESS PRIORITY  
+==================================================  
+  
+This is NOT primarily a consumer shopping website.  
+  
+Priority order:  
+  
+1. BULK ORDERS  
+2. WHOLESALE  
+3. DISTRIBUTORS  
+4. INSTITUTIONAL BUYERS  
+5. RETAIL E-COMMERCE  
+6. ONLINE PAYMENT  
+  
+Therefore:  
+  
+"Get Bulk Quote"  
+  
+"Request Wholesale Price"  
+  
+"Become a Distributor"  
+  
+"Talk to Sales"  
+  
+must be strategically visible throughout the website.  
+  
+==================================================  
+DEVELOPMENT WORKFLOW  
+==================================================  
+  
+Do NOT attempt to blindly modify everything at once.  
+  
+STEP 1:  
+  
+Inspect the existing project.  
+  
+Report:  
+  
+- Current folder structure  
+- Existing routes  
+- Existing components  
+- Existing dependencies  
+- Existing images  
+- Current problems  
+- What can be reused  
+  
+DO NOT modify files during Step 1.  
+  
+STEP 2:  
+  
+After inspection, implement:  
+  
+Global design system  
+Navbar  
+Top bar  
+Footer  
+Made in India badge  
+Homepage  
+  
+STEP 3:  
+  
+Implement:  
+  
+Products  
+Product detail  
+Bulk orders  
+Distributor  
+  
+STEP 4:  
+  
+Implement:  
+  
+Cart  
+Checkout  
+Razorpay architecture  
+Order success  
+  
+STEP 5:  
+  
+Implement:  
+  
+About  
+Why AT-ONE  
+Contact  
+Legal pages  
+  
+STEP 6:  
+  
+Perform responsive and visual cleanup.  
+  
+STEP 7:  
+  
+Run:  
+  
+npm run dev  
+  
+Then test all routes.  
+  
+Run:  
+  
+npm run lint  
+  
+Fix errors and warnings caused by your implementation.  
+  
+==================================================  
+FINAL REQUIREMENT  
+==================================================  
+  
+Do not just give me code snippets in chat.  
+  
+Actually modify the existing project files.  
+  
+After completing each phase, tell me:  
+  
+1. Files created  
+2. Files modified  
+3. Dependencies added  
+4. Routes created  
+5. What is working  
+6. What requires real business information  
+7. What requires API/payment credentials  
+  
+Do not invent:  
+  
+Phone numbers  
+Email addresses  
+Product prices  
+GST details  
+Certifications  
+Awards  
+Production capacity  
+Customer names  
+Distributor margins  
+Business statistics  
+  
+Use clearly marked placeholders where necessary.  
+
+DESIGN CONSISTENCY
+
+Do not introduce a different visual style on individual pages.
+
+All pages must share:
+- Same typography
+- Same spacing system
+- Same button styles
+- Same border radius system
+- Same shadows
+- Same color hierarchy
+- Same navigation
+- Same footer
+- Same card language
+
+The website should feel like one coherent brand, not separate AI-generated pages.
+  
+The final result should be a premium AT-ONE website with:  
+  
+Modern Simple typography  
+Professional product presentation  
+Made in India positioning  
+B2B wholesale focus  
+Bulk order system  
+Distributor system  
+E-commerce cart  
+Checkout  
+Razorpay payment architecture  
+Responsive design  
+SEO  
+Future-ready architecture  
+  
+Start by inspecting the existing project.  
+DO NOT modify anything until the inspection is complete.
+If information is unavailable:
+- Do not guess.
+- Do not fabricate.
+- Clearly identify information requiring confirmation.
+
