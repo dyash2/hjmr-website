@@ -1,0 +1,385 @@
+## Phase 0 — Audit Existing Project
+
+**Purpose:** Don't touch the existing demo until Claude understands it.
+
+Claude checks:
+
+- Existing folder structure
+- Routes
+- Components
+- Dependencies
+- `public/` assets
+- Product data
+- Current styling
+- Existing functionality
+- Vercel/demo implementation
+- What can be reused
+- What needs to be refactored
+- What is currently mocked
+
+### Important rule
+
+**No modifications whatsoever.**
+
+Claude only gives you an audit/report.
+
+This protects your existing client demo.
+
+---
+
+# Phase 1 — Design System + Homepage
+
+This combines the visual/design work and homepage because they are tightly connected.
+
+### Global design
+
+Implement:
+
+- AT-ONE color system
+- Typography
+- Spacing
+- Buttons
+- Cards
+- Forms
+- Badges
+- Shadows
+- Responsive containers
+- Animations
+- Made in India identity
+
+Design direction:
+
+> Premium, clean, modern Indian manufacturing brand.
+
+And explicitly:
+
+> **No glassmorphism.**  
+> No excessive gradients.  
+> No excessive rounded cards.  
+> No heavy colors.  
+> No generic AI-template appearance.
+
+### Global components
+
+Build/refine:
+
+- Top bar
+- Navbar
+- Mobile menu
+- Footer
+- Made in India badge
+
+### Homepage
+
+Then transform the existing homepage:
+
+- Hero
+- Product showcase
+- Trust section
+- Categories
+- Featured products
+- Bulk-order CTA
+- Why AT-ONE
+- Business types
+- Bulk-order process
+- Manufacturing/About section
+- Final CTA
+
+At the end of Phase 1, you should have a **professional-looking website shell + polished homepage**.
+
+---
+
+# Phase 2 — Products + B2B
+
+This combines everything related to **selling the products and getting business customers**.
+
+### Product system
+
+Build/refine:
+
+`/products`
+
+and:
+
+`/products/[slug]`
+
+Implement:
+
+- Product data structure
+- Categories
+- Search
+- Filters
+- Sorting
+- Product cards
+- Product gallery
+- Specifications
+- SKU
+- MOQ
+- Pricing
+- Wholesale pricing
+- Bulk pricing
+- Made in India badge
+
+Keep product data separate:
+
+data/products.js
+
+### Bulk orders
+
+Build:
+
+`/bulk-orders`
+
+With:
+
+- Company
+- Contact person
+- Email
+- Phone
+- GST
+- City/state
+- Products
+- Quantity
+- Monthly requirement
+- Message
+
+Include proper:
+
+- Validation
+- Loading state
+- Error state
+- Success state
+
+### Distributor
+
+Build:
+
+`/distributor`
+
+Including:
+
+- Why partner
+- Benefits
+- Product range
+- Business support
+- Territory information
+- Application form
+
+No invented margins or business claims.
+
+### Important
+
+This phase should make the website **actually useful for AT-ONE's main business objective**:
+
+> Bulk orders → Wholesale → Distributors → Institutional buyers.
+
+---
+
+# Phase 3 — E-commerce + Payments
+
+Now that products exist, add the shopping functionality.
+
+### Cart
+
+`/cart`
+
+Implement:
+
+- Add/remove
+- Quantity
+- Subtotal
+- GST
+- Shipping
+- Grand total
+
+### Checkout
+
+`/checkout`
+
+Implement:
+
+- Customer details
+- Company details
+- GST
+- Billing/shipping
+- Order summary
+- Payment UI
+
+### Razorpay
+
+Then integrate:
+
+/api/payment/create-order
+
+/api/payment/verify
+
+Proper architecture:
+
+Customer
+
+   ↓
+
+Cart
+
+   ↓
+
+Checkout
+
+   ↓
+
+Server
+
+   ↓
+
+Razorpay
+
+   ↓
+
+Payment
+
+   ↓
+
+Server-side verification
+
+   ↓
+
+Order confirmed
+
+Never fake successful payments.
+
+### Order success
+
+Create:
+
+`/order-success`
+
+with:
+
+- Order number
+- Payment status
+- Customer
+- Products
+- Amount
+- Continue Shopping
+- Contact Support
+
+Keeping all of this together makes much more sense than having separate phases for cart, checkout, Razorpay, and success.
+
+---
+
+# Phase 4 — Production Polish + Launch
+
+This is the final cleanup phase.
+
+### Supporting pages
+
+Build/refine:
+
+- `/about`
+- `/why-at-one`
+- `/contact`
+- `/privacy-policy`
+- `/terms`
+- `/shipping-policy`
+- `/refund-policy`
+
+### SEO
+
+Implement:
+
+- Metadata
+- Open Graph
+- Sitemap
+- Robots
+- Favicon
+- H1/H2 structure
+- Alt text
+
+### WhatsApp
+
+Add configurable floating WhatsApp CTA.
+
+### Responsive QA
+
+Test:
+
+320
+
+375
+
+425
+
+768
+
+1024
+
+1280
+
+1440
+
+1920
+
+Check:
+
+- No horizontal scrolling
+- No broken layouts
+- No overflowing text
+- Mobile navigation
+- Images
+- Buttons
+- Forms
+- Product cards
+
+### Security / production QA
+
+Check:
+
+- `.env.local`
+- Secrets
+- Razorpay keys
+- API routes
+- Input validation
+- Dependency issues
+- Error handling
+- Build errors
+- Lint errors
+
+Run:
+
+npm run build
+
+npm run lint
+
+Then test the Vercel deployment.
+
+---
+
+# So the whole project becomes
+
+PHASE 0
+
+Existing Project Audit
+
+        ↓
+
+PHASE 1
+
+Design System + Homepage
+
+        ↓
+
+PHASE 2
+
+Products + B2B
+
+        ↓
+
+PHASE 3
+
+E-commerce + Payments
+
+        ↓
+
+PHASE 4
+
+Production Polish + Launch
