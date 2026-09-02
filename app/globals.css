@@ -1,26 +1,132 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* ------------------------------------------------------------------
+   AT-ONE Design System
+   Palette is deliberately narrow: one primary hue (periwinkle-indigo)
+   carried across brand + accent, one neutral navy for text, one warm
+   neutral background. No secondary "brand" hues are introduced.
+------------------------------------------------------------------- */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #7886c7;
+  --color-secondary: #a9b5df;
+  --color-accent: #60a5fa;
+  --color-background: #f8fafc;
+  --color-surface: #ffffff;
+  --color-navy: #0f172a;
+  --color-muted: #64748b;
+
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-manrope);
+
+  --shadow-soft: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 24px -12px rgba(15, 23, 42, 0.12);
+  --shadow-lift: 0 4px 8px rgba(15, 23, 42, 0.04), 0 20px 40px -16px rgba(120, 134, 199, 0.35);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #000000;
-  }
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+* {
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: rgba(120, 134, 199, 0.25);
+  color: #0f172a;
+}
+
+/* Utility: soft shadow used across cards */
+.shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+.shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+/* Signature motif: a single diagonal shine sweep, used sparingly
+   on the hero product frame and on primary CTA hover — a literal,
+   restrained nod to "Sparkles your home..!" */
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-120%) rotate(8deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.55;
+  }
+  55% {
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateX(140%) rotate(8deg);
+    opacity: 0;
+  }
+}
+
+.shine-sweep::after {
+  content: "";
+  position: absolute;
+  inset: -20% -60%;
+  background: linear-gradient(
+    75deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.75) 50%,
+    transparent 60%
+  );
+  pointer-events: none;
+  animation: shine-sweep 2.6s ease-in-out 0.6s 1;
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.btn-shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    75deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+.btn-shine:hover::after {
+  transform: translateX(120%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .shine-sweep::after,
+  .btn-shine::after {
+    animation: none !important;
+    transition: none !important;
+    display: none;
+  }
+}
+
+/* Prevent any accidental horizontal overflow from full-bleed sections */
+html, body {
+  overflow-x: hidden;
 }

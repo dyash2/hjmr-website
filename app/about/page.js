@@ -1,40 +1,80 @@
-import { ShieldCheck, Users, Factory } from 'lucide-react';
+import { ShieldCheck, Users, Factory, ArrowRight } from "lucide-react";
+import Container from "@/components/ui/Container";
+import SectionHeading from "@/components/ui/SectionHeading";
+import Button from "@/components/ui/Button";
+import MadeInIndiaBadge from "@/components/ui/MadeInIndiaBadge";
+import { COMPANY } from "@/data/products";
+
+export const metadata = {
+  title: "About Us | AT-ONE",
+  description:
+    "Established in 2022, HJMR Industries manufactures the AT-ONE range of spin mops and cleaning accessories from its facility in Vasai, Palghar.",
+};
+
+const stats = [
+  {
+    icon: ShieldCheck,
+    title: "Statutory Profile",
+    lines: [`GST: ${COMPANY.gst}`, `IEC Code: ${COMPANY.iec}`],
+  },
+  {
+    icon: Factory,
+    title: "Infrastructure",
+    lines: [
+      "State-of-the-art manufacturing unit in Vasai capable of high-volume export quality production.",
+    ],
+  },
+  {
+    icon: Users,
+    title: "Leadership",
+    lines: [
+      "Led by Mahavir Kothari, Ritesh Mehta, and partners, dedicated to manufacturing excellence.",
+    ],
+  },
+];
 
 export default function AboutPage() {
   return (
-    <div className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Company Intro */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h1 className="text-4xl font-bold text-slate-900 mb-6">About HJMR Industries</h1>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            Established in 2022, HJMR Industries has grown into a trusted name in household cleaning manufacturing. 
-            Located in the industrial hub of Vasai, Palghar, we specialize in high-volume production of spin mops and cleaning accessories.
-          </p>
+    <div className="bg-white py-16 lg:py-20">
+      <Container>
+        <div className="mx-auto mb-6 flex justify-center">
+          <MadeInIndiaBadge tone="tint" />
+        </div>
+        <SectionHeading
+          eyebrow="Our Company"
+          title={`About ${COMPANY.legalName}`}
+          description={`Established in ${COMPANY.established}, ${COMPANY.legalName} has grown into a trusted name in household cleaning manufacturing. Located in the industrial hub of ${COMPANY.location}, we specialize in high-volume production of spin mops and cleaning accessories under the AT-ONE brand.`}
+          className="max-w-3xl"
+        />
+
+        <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {stats.map(({ icon: Icon, title, lines }) => (
+            <div
+              key={title}
+              className="rounded-2xl border border-slate-100 bg-[var(--color-background)] p-8 shadow-soft"
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-primary)]/10 text-[var(--color-primary)]">
+                <Icon size={22} />
+              </div>
+              <h3 className="mb-2 text-xl font-bold text-[var(--color-navy)]">{title}</h3>
+              {lines.map((line) => (
+                <p key={line} className="text-sm leading-relaxed text-[var(--color-muted)]">
+                  {line}
+                </p>
+              ))}
+            </div>
+          ))}
         </div>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
-          <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
-            <ShieldCheck className="h-10 w-10 text-blue-600 mb-4" />
-            <h3 className="font-bold text-slate-900 text-xl mb-2">Statutory Profile</h3>
-            <p className="text-sm text-slate-600">GST: 27AAPFH4059M1ZQ</p>
-            <p className="text-sm text-slate-600">IEC Code: AAPFH4059M</p>
-          </div>
-          <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
-            <Factory className="h-10 w-10 text-blue-600 mb-4" />
-            <h3 className="font-bold text-slate-900 text-xl mb-2">Infrastructure</h3>
-            <p className="text-sm text-slate-600">State-of-the-art manufacturing unit in Vasai capable of high-volume export quality production.</p>
-          </div>
-          <div className="p-8 bg-slate-50 rounded-2xl border border-slate-100">
-            <Users className="h-10 w-10 text-blue-600 mb-4" />
-            <h3 className="font-bold text-slate-900 text-xl mb-2">Leadership</h3>
-            <p className="text-sm text-slate-600">Led by Mahavir Kothari, Ritesh Mehta, and partners, dedicated to manufacturing excellence.</p>
-          </div>
+        <div className="mt-16 flex flex-col items-center justify-center gap-4 border-t border-slate-100 pt-12 text-center sm:flex-row">
+          <Button href="/products" variant="outline">
+            Browse Products
+          </Button>
+          <Button href="/bulk-orders" shine>
+            Request Bulk Quote <ArrowRight size={16} />
+          </Button>
         </div>
-
-      </div>
+      </Container>
     </div>
   );
 }
